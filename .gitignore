@@ -1,0 +1,35 @@
+# Tests and bench/maintenance tools
+tests/
+debug_tests/
+test_board/
+test.py
+test_*
+*_test.py
+*_check.py
+*commissioning*
+*static_hsi*
+# Python / local environments
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+# Logs and firmware build output
+logs/
+*.log
+Build/
+Output/
+driver/MDK-ARM/Logistics_Vehicle_F407/
+*.o
+*.d
+*.crf
+*.axf
+*.hex
+*.bin
+*.map
+*.lst
+*.lnp
+*.dep
+*.htm
+*.uvguix.*
+*.uvoptx

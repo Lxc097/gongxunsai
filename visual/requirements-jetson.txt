@@ -1,0 +1,6 @@
+# Jetson host dependencies installed from PyPI.
+# YDLIDAR is intentionally excluded: its official SDK builds the `ydlidar`
+# Python extension locally; see jetson/README.md.
+numpy>=1.24,<3
+opencv-python>=4.8,<5
+pyserial>=3.5,<4

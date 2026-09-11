@@ -1,0 +1,65 @@
+{
+  "board": {
+    "name": "控制板_3.2 / STM32F407VET6",
+    "dynamic_map_uart": "USART6",
+    "mcu_tx_pin": "PC6",
+    "mcu_rx_pin": "PC7",
+    "connector": "H27",
+    "connector_mcu_tx": 3,
+    "connector_mcu_rx": 4,
+    "connector_ground": 2,
+    "baudrate": 115200,
+    "warning": "H27-1 is 5V; do not connect it to Jetson UART power"
+  },
+  "front_rgb_camera": {
+    "device": "/dev/v4l/by-id/usb-HJ_USB_2.0_Camera_HJ_USB_2.0_Camera_SN0001-video-index0",
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "pixel_format": "MJPG",
+    "frame_timeout_s": 0.5,
+    "reconnect_attempts": 3,
+    "reconnect_delay_s": 0.25,
+    "role": "QR and global semantic vision"
+  },
+  "ydlidar_x3_pro": {"port": null, "baudrate": 115200, "role": "obstacles and boundary correction"},
+  "imu": {
+    "port": null,
+    "baudrate": 115200,
+    "protocol": "yahboom_native",
+    "variant": "six_axis",
+    "mounting": "x_forward_y_left_z_up",
+    "yaw_sign": 1,
+    "yaw_sign_verified": true,
+    "role": "six-axis gyro yaw; vehicle forward/left/up = IMU +X/+Y/+Z"
+  },
+  "openmv": {"port": null, "baudrate": 115200, "role": "terminal material/ring alignment"},
+  "stp23l": {
+    "port": null,
+    "baudrate": 230400,
+    "role": "terminal Z distance; receive only, sensor RX unconnected",
+    "minimum_mm": 70,
+    "maximum_mm": 7500,
+    "window": 7,
+    "max_jump_mm": 120,
+    "stable_samples": 3,
+    "stable_tolerance_mm": 20,
+    "minimum_valid_points": 6,
+    "minimum_confidence": null,
+    "stale_timeout_s": 0.5,
+    "read_timeout_s": 0.02
+  },
+  "f407": {"port": null, "baudrate": 115200, "watchdog_ms": 300},
+  "runtime": {
+    "control_hz": 20.0,
+    "startup_timeout_s": 8.0,
+    "imu_timeout_s": 0.6,
+    "lidar_timeout_s": 1.0,
+    "emergency_stop_mm": 140.0,
+    "lidar_masked_sectors_deg": [],
+    "initial_pose": {"x_mm": 2250.0, "y_mm": 2250.0, "yaw_deg": 180.0},
+    "default_goal": "qr",
+    "target_yaw_deg": null,
+    "log_file": "jetson/logs/runtime.log"
+  }
+}
