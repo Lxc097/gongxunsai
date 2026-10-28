@@ -20,6 +20,8 @@ python3 -m jetson.main --plan-only
 
 `--plan-only` 只检查配置与规划，不打开硬件。实际导航入口为 `python3 -m jetson.main`；此前须完成 `jetson/config/vehicle.json` 的串口、相机、传感器和底盘参数配置及实机标定。雷达还需要在 Jetson 安装官方 YDLIDAR SDK 的 `ydlidar` Python 扩展。
 
+离线场地规划在本目录执行 `python3 path_planning/path_planning.py`。`python3 -m path_planning.path_planning` 会因包初始化已经载入该模块而打印 RuntimeWarning。
+
 ## OpenMV
 
 将 `openmv/terminal_vision.py` 作为 OpenMV 的 `main.py`，将 `openmv/concentric_circle.py` 放在板上同目录，使用 OpenMV IDE 标定 LAB 阈值、ROI、像素/毫米比例和夹爪中心。
