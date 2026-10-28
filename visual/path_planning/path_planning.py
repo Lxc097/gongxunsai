@@ -59,8 +59,8 @@ COLORS = {
 }
 
 
-# 与 driver/Drivers/BSP/map.h 中的 ActionType 完全一致。数值会经由 C
-# 动作表和后续串口协议传输，不能依赖枚举声明顺序。
+# 动作整数编码定义在本文件，不能依赖枚举声明顺序。当前 driver 工程没有
+# ActionType 头文件，F407 拒绝 ACTION_BATCH，见 PROTOCOL.md。
 PATH_ACTION_PROTOCOL_VERSION = 1
 
 

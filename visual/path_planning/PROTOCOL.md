@@ -65,5 +65,5 @@ NACK：1=CRC，2=版本，3=不支持类型，4=长度，5=非法速度/看门�
 
 - Jetson 编解码：`path_planning/path_protocol.py`
 - Jetson 串口发送：`jetson/hardware/driver_link.py`
-- F407 接收与看门狗：`driver/F407_Replica_DynamicMap/USER_Code/dynamic_map_link.c`
-- F407 底盘执行：`driver/F407_Replica_DynamicMap/RTOS_APP/Chassis_task.c`
+- F407 接收与看门狗：`driver/USER_Code/dynamic_map_link.c`
+- F407 底盘执行：`driver/RTOS_APP/Chassis_task.c`

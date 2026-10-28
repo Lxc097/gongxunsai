@@ -12,14 +12,33 @@ test_*
 __pycache__/
 *.py[cod]
 .venv/
+venv/
 .env
 .env.*
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+*.swn
+.idea/
+.vscode/
+*.code-workspace
+
 # Logs and firmware build output
 logs/
 *.log
 Build/
 Output/
 driver/MDK-ARM/Logistics_Vehicle_F407/
+build/
+cmake-build-*/
 *.o
 *.d
 *.crf
@@ -33,3 +52,11 @@ driver/MDK-ARM/Logistics_Vehicle_F407/
 *.htm
 *.uvguix.*
 *.uvoptx
+*.scvd
+*.iex
+*.bak
+*.orig
+JLinkLog.txt
+JLinkSettings.ini
+DebugConfig/
+.mxproject
